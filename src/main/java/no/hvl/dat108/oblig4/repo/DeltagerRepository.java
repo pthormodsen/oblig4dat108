@@ -13,12 +13,13 @@ public class DeltagerRepository {
     private List<Deltager> deltagere = new ArrayList<>();
 
     public DeltagerRepository() {
-        deltagere.add(new Deltager("Anne", "Panne", "23456789", "kvinne"));
-        deltagere.add(new Deltager("Arne", "Arnesen", "90123456", "mann"));
-        deltagere.add(new Deltager("Lars-Petter", "Helland", "12345679", "mann"));
-        deltagere.add(new Deltager("Per", "Viskelær", "34534534", "mann"));
-        deltagere.add(new Deltager("Xx-x", "Xxx", "12321378", "kvinne"));
-        deltagere.add(new Deltager("Patrik", "Thormodsen", "12312312", "mann"));
+        deltagere.add(new Deltager("Anne", "Panne", "23456789", "1234", "kvinne"));
+        deltagere.add(new Deltager("Arne", "Arnesen", "90123456", "1234", "mann"));
+        deltagere.add(new Deltager("Lars-Petter", "Helland", "12345679", "1234", "mann"));
+        deltagere.add(new Deltager("Per", "Viskelær", "34534534", "1234", "mann"));
+        deltagere.add(new Deltager("Xx-x", "Xxx", "12321378", "1234", "kvinne"));
+        deltagere.add(new Deltager("Patrik", "Thormodsen", "12312312", "1234", "mann"));
+
     }
 
     public List<Deltager> getDeltagere(){

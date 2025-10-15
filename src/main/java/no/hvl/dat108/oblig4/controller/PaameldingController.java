@@ -41,7 +41,7 @@ public class PaameldingController {
             return "paamelding_med_melding";
         }
 
-        Deltager d = new Deltager(fornavn, etternavn, mobil, kjonn);
+        Deltager d = new Deltager(fornavn, etternavn, mobil, passord, kjonn);
         repo.lagre(d);
         model.addAttribute("deltager", d);
         return "paameldt";
