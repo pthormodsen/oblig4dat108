@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="no">
 <head>
@@ -10,29 +11,47 @@
             display: inline;      /* legg etikettene på samme linje */
             margin-right: 10px;   /* litt luft mellom dem */
         }
+        input:valid {
+            background-color: palegreen;
+        }
+
+        input:invalid {
+            background-color: lightpink;
+        }
     </style>
 </head>
 
 <body>
     <h2>Påmelding</h2>
-    <p style="color:red;">Påmeldingsdetaljer er ugyldige</p>
-
+    <c:if test="${not empty melding}">
+        <p style="color:red;"><b>${melding}</b></p>
+    </c:if>
 
     <form action="paamelding" method="post">
         <label for="fornavn">Fornavn</label>
-        <input type="text" id="fornavn" name="fornavn" required><br>
+        <input type="text" id="fornavn" name="fornavn" required
+               pattern="[A-ZÆØÅ][a-zæøå\- ]{1,19}"
+               title="Stor første bokstav, 2-20 tegn"> <br>
 
         <label for="etternavn">Etternavn</label>
-        <input type="text" id="etternavn" name="etternavn" required><br>
+        <input type="text" id="etternavn" name="etternavn" required
+               pattern="[A-ZÆØÅ][a-zæøå\- ]{1,19}"
+               title="Stor første bokstav, 2-20 tegn"> <br>
 
         <label for="mobil">Mobil (8 siffer)</label>
-        <input type="text" id="mobil" name="mobil" pattern="\d{8}" required><br>
+        <input type="text" id="mobil" name="mobil" required
+               pattern="\d{8}"
+               title="Akkurat 8 siffer"><br>
 
         <label for="passord">Passord</label>
-        <input type="password" id="passord" name="passord" required><br>
+        <input type="password" id="passord" name="passord" required
+               minlength="4"
+               title="Må være mer en 4 tegn"><br>
 
         <label for="passord2">Passord repetert</label>
-        <input type="password" id="passord2" name="passord2" required><br>
+        <input type="password" id="passord2" name="passord2" required
+               minlength="4"
+               title="Må være mer en 4 tegn"><br>
 
         <label>Kjønn</label>
         <div class="kjonn-valg">

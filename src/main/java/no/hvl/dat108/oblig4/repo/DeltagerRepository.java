@@ -4,6 +4,7 @@ import no.hvl.dat108.oblig4.model.Deltager;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 @Repository
@@ -20,9 +21,20 @@ public class DeltagerRepository {
         deltagere.add(new Deltager("Patrik", "Thormodsen", "12312312", "mann"));
     }
 
-    public List<Deltager> getDeltagere() {
-        return deltagere;
+    public List<Deltager> getDeltagere(){
+        return deltagere.stream().
+            sorted(Comparator.comparing(Deltager::getFornavn)
+                .thenComparing(Deltager::getEtternavn))
+            .toList();
     }
 
+    public void lagre(Deltager d){
+        deltagere.add(d);
+    }
+
+    public boolean finnes(String mobil){
+        return deltagere.stream().
+            anyMatch(d -> d.getMobil().equals(mobil));
+    }
 
 }
