@@ -29,8 +29,10 @@ public class DeltagerRepository {
             .toList();
     }
 
-    public void lagre(Deltager d){
-        deltagere.add(d);
+    public void lagre(Deltager d) {
+        if (!finnes(d.getMobil())) {
+            deltagere.add(d);
+        }
     }
 
     public boolean finnes(String mobil){
