@@ -8,15 +8,21 @@
     <title>Påmelding</title>
     <style>
         .kjonn-valg label {
-            display: inline;      /* legg etikettene på samme linje */
-            margin-right: 10px;   /* litt luft mellom dem */
+            display: inline;
+            margin-right: 10px;
         }
+
         input:valid {
             background-color: palegreen;
         }
 
         input:invalid {
             background-color: lightpink;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            color: #000;
         }
     </style>
 </head>
