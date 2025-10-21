@@ -20,6 +20,10 @@
             background-color: lightpink;
         }
 
+        .passord-mismatch {
+            background-color: lightpink !important;
+        }
+
         input[type="text"],
         input[type="password"] {
             color: #000;
@@ -58,6 +62,22 @@
         <input type="password" id="passord2" name="passord2" required
                minlength="4"
                title="Må være mer en 4 tegn"><br>
+
+        <script>
+            function sjekkPassordMatch() {
+                var passord = document.getElementById('passord');
+                var passord2 = document.getElementById('passord2');
+                if (passord2.value !== passord.value) {
+                    passord2.setCustomValidity('Passordene må være like');
+                    passord2.classList.add('passord-mismatch');
+                } else {
+                    passord2.setCustomValidity('');
+                    passord2.classList.remove('passord-mismatch');
+                }
+            }
+            document.getElementById('passord').oninput = sjekkPassordMatch;
+            document.getElementById('passord2').oninput = sjekkPassordMatch;
+        </script>
 
         <label>Kjønn</label>
         <div class="kjonn-valg">
