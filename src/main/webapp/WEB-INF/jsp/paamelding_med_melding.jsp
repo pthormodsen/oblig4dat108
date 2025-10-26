@@ -69,7 +69,8 @@
         </div>
         <br>
 
-        <button type="submit">Meld meg på</button>
+        <button type="submit">Meld meg på</button><br>
+        <a href="innlogging">Gå til innlogging</a>
     </form>
 </body>
 </html>

@@ -9,6 +9,10 @@
 </head>
 <body>
 	<h2>Deltagerliste</h2>
+    <form action="logout" method="post" style="margin-bottom: 10px;">
+        <button type="submit">Logg ut</button>
+    </form>
+    <p>Innlogget som: ${innloggetMobil} / ${fornavn} ${etternavn}</p>
 	<table>
         <tr>
             <th>Kjønn</th>
@@ -16,7 +20,7 @@
             <th align="left">Mobil</th>
         </tr>
         <c:forEach var="d" items="${deltagere}">
-            <tr>
+            <tr <c:if test="${d.mobil == innloggetMobil}">style="background-color: palegreen; color: black;"</c:if>>
                 <td align="center">
                     <c:choose>
                         <c:when test="${d.kjonn == 'kvinne'}">&#9792;</c:when>

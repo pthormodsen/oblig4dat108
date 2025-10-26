@@ -16,6 +16,6 @@
            ${deltager.mobil}<br>
            ${deltager.kjonn}
 	</p>
-	<a href="deltagerliste">Gå til deltagerlisten</a>
+    <a href="deltagerliste?mobil=${deltager.mobil}">Gå til deltagerlisten</a>
 </body>
 </html>

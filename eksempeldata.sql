@@ -1,0 +1,7 @@
+INSERT INTO deltager (mobil, fornavn, etternavn, hash, salt, kjonn) VALUES
+                                                                        ('23456789', 'Anne', 'Panne', 'BFD3F847D6E3B4979A1ADDC5E467F6E60F965D22B8E6714CC2E1B2515E2F3DCE', 'A1B2C3D4E5F6A7B8C9D0E1F2A3B4C5D6', 'kvinne'),
+                                                                        ('90123456', 'Arne', 'Arnesen', 'BFD3F847D6E3B4979A1ADDC5E467F6E60F965D22B8E6714CC2E1B2515E2F3DCE', 'A1B2C3D4E5F6A7B8C9D0E1F2A3B4C5D6', 'mann'),
+                                                                        ('34534534', 'Per', 'Viskelær', 'BFD3F847D6E3B4979A1ADDC5E467F6E60F965D22B8E6714CC2E1B2515E2F3DCE', 'A1B2C3D4E5F6A7B8C9D0E1F2A3B4C5D6', 'mann'),
+                                                                        ('12345679', 'Lars-Petter', 'Helland', 'BFD3F847D6E3B4979A1ADDC5E467F6E60F965D22B8E6714CC2E1B2515E2F3DCE', 'A1B2C3D4E5F6A7B8C9D0E1F2A3B4C5D6', 'mann'),
+                                                                        ('12321378', 'Xx-x', 'Xxx', 'BFD3F847D6E3B4979A1ADDC5E467F6E60F965D22B8E6714CC2E1B2515E2F3DCE', 'A1B2C3D4E5F6A7B8C9D0E1F2A3B4C5D6', 'kvinne'),
+                                                                        ('12312312', 'Patrik', 'Thormodsen', 'BFD3F847D6E3B4979A1ADDC5E467F6E60F965D22B8E6714CC2E1B2515E2F3DCE', 'A1B2C3D4E5F6A7B8C9D0E1F2A3B4C5D6', 'mann');
